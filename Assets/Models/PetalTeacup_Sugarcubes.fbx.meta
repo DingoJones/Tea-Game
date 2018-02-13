@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: b0cbefce8c4ad419db1b1dd3dcc3cde6
+timeCreated: 1517424120
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Petal
+    100002: Petal.001
+    100004: Petal.002
+    100006: //RootNode
+    100008: Saucer
+    100010: Sugarcube.001
+    100012: Sugarcube.002
+    100014: Tea
+    400000: Petal
+    400002: Petal.001
+    400004: Petal.002
+    400006: //RootNode
+    400008: Saucer
+    400010: Sugarcube.001
+    400012: Sugarcube.002
+    400014: Tea
+    2300000: Petal
+    2300002: Petal.001
+    2300004: Petal.002
+    2300006: //RootNode
+    2300008: Saucer
+    2300010: Sugarcube.001
+    2300012: Sugarcube.002
+    2300014: Tea
+    3300000: Petal
+    3300002: Petal.001
+    3300004: Petal.002
+    3300006: //RootNode
+    3300008: Saucer
+    3300010: Sugarcube.001
+    3300012: Sugarcube.002
+    3300014: Tea
+    4300000: Cup
+    4300002: Sugarcube.001
+    4300004: Petal.002
+    4300006: Petal.001
+    4300008: Petal
+    4300010: Tea
+    4300012: Saucer
+    7400000: Petal.002|Petal.001Action
+    7400002: Petal.002|Petal.002Action
+    7400004: Petal.002|Petal.003Action
+    7400006: Petal.002|Petal.004Action
+    7400008: Petal.002|Petal.005Action
+    7400010: Petal.002|Petal.006Action
+    7400012: Petal.002|Petal.007Action
+    7400014: Petal.002|Petal.008Action
+    7400016: Petal.002|PetalAction
+    7400018: Petal.002|Plane.028Action
+    7400020: Petal.001|Petal.001Action
+    7400022: Petal.001|Petal.002Action
+    7400024: Petal.001|Petal.003Action
+    7400026: Petal.001|Petal.004Action
+    7400028: Petal.001|Petal.005Action
+    7400030: Petal.001|Petal.006Action
+    7400032: Petal.001|Petal.007Action
+    7400034: Petal.001|Petal.008Action
+    7400036: Petal.001|PetalAction
+    7400038: Petal.001|Plane.028Action
+    7400040: Petal|Petal.001Action
+    7400042: Petal|Petal.002Action
+    7400044: Petal|Petal.003Action
+    7400046: Petal|Petal.004Action
+    7400048: Petal|Petal.005Action
+    7400050: Petal|Petal.006Action
+    7400052: Petal|Petal.007Action
+    7400054: Petal|Petal.008Action
+    7400056: Petal|PetalAction
+    7400058: Petal|Plane.028Action
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
