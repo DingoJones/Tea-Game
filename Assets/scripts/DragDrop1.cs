@@ -14,9 +14,6 @@ public class DragDrop1 : MonoBehaviour
 	public GameObject State;
 	public GameObject TeaBag;
 
-	private Transform teaBag;
-
-	private float trigDis;
 
 	public bool held;
 	public bool teaPlace;
@@ -24,15 +21,13 @@ public class DragDrop1 : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		trigDis = 1;
 
 		State = GameObject.Find ("State");
 		TeaBag = GameObject.FindGameObjectWithTag ("TeaBag");
-		teaBag = GameObject.FindWithTag("TeaBag").GetComponent<Transform>();
 
 		teaPlace = false;
 		held = false;
-		TeaBag.SetActive (false);
+		//TeaBag.SetActive (false);
 		//Debug.Log (TeaBag==null);
 	}
 
@@ -49,15 +44,8 @@ public class DragDrop1 : MonoBehaviour
 					//Converting world position to screen position.
 					positionOfScreen = Camera.main.WorldToScreenPoint (getTarget.transform.position);
 					offsetValue = getTarget.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, positionOfScreen.z));
-				/*
-					if ((Vector3.Distance (teaBag.position, getTarget.transform.position) < trigDis)) {
-						State.GetComponent<TeaStateM2> ().bagHold = true;
-						print ("tea is in hand");
-					}
-*/
-					if (teaPlace == true) {
-						TeaBag.SetActive (false);
-					}
+
+
 				}
 				StartCoroutine (Held ());
 
@@ -70,6 +58,8 @@ public class DragDrop1 : MonoBehaviour
 				isMouseDragging = false;
 				print ("I no supposed hold");
 				StartCoroutine (NoHeld());
+
+
 			}
 		}
 
