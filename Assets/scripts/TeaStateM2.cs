@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TeaStateM2 : MonoBehaviour {
 
@@ -29,6 +30,7 @@ public class TeaStateM2 : MonoBehaviour {
 	public GameObject TeaBag;
 	public GameObject DD;
 	public GameObject Tea;
+	public GameObject Done;
 
 	public GameObject acheive1;
 	public GameObject acheive2;
@@ -56,7 +58,7 @@ public class TeaStateM2 : MonoBehaviour {
 		kettleLocation = GameObject.FindWithTag ("KettleHere").GetComponent<Transform> ();
 		teaBag = GameObject.FindWithTag("TeaBag").GetComponent<Transform>();
 
-		steam = GameObject.FindWithTag ("Steam");
+		steam = GameObject.FindGameObjectWithTag ("Steam");
 		steam.SetActive (false);
 		Tea = GameObject.FindWithTag ("tea");
 		Tea.SetActive (false);
@@ -71,6 +73,8 @@ public class TeaStateM2 : MonoBehaviour {
 		acheive1.SetActive (false);
 		acheive2.SetActive (false);
 		acheive3.SetActive (false);
+
+		Done.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -123,7 +127,10 @@ public class TeaStateM2 : MonoBehaviour {
 
 		if (KBoiled == true) {
 			steam.SetActive (true);
-		}
+		} 
+		/*else {
+			steam.SetActive (false);
+		}*/
 
 
 		if ((Vector3.Distance (teaBag.position, pot.position) < trigDis2)){
@@ -165,6 +172,10 @@ public class TeaStateM2 : MonoBehaviour {
 				}
 
 			}
+		}
+
+		if (teaDone == true) {
+			//Done.SetActive (true);
 		}
 
 

@@ -1,12 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/CatSCR.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/TeaStateM2.cs">
     <Files>
+      <File FileName="Assets/scripts/UIButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/TeaStateM2.cs" Line="178" Column="6" />
+      <File FileName="Assets/scripts/OFollow.cs" Line="24" Column="27" />
+      <File FileName="Assets/scripts/UIButtonScene.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/animtext.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/TeaState.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/TeaStateM2.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/DragDrop1.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/CatSCR.cs" Line="24" Column="3" />
+      <File FileName="Assets/scripts/CatSCR.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/PickUpObjects.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/TeaSetButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/UIButtonCheat.cs" Line="39" Column="39" />
+      <File FileName="Assets/scripts/UIBCT.cs" Line="29" Column="3" />
+      <File FileName="Assets/scripts/Reset.cs" Line="14" Column="3" />
+      <File FileName="Assets/scripts/PickUpObjects1.cs" Line="5" Column="28" />
+      <File FileName="Assets/scripts/ChangeColor.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/UIBCD.cs" Line="3" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
