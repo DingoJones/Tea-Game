@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class TeaStateM2 : MonoBehaviour {
+
+	//public float changeSpeed = 9f;
+	//MeshRenderer rend;
 
 	private Transform pot;
 	private Transform potLocation;
@@ -11,6 +15,8 @@ public class TeaStateM2 : MonoBehaviour {
 	private Transform kettle;
 	private Transform kettleLocation;
 	private Transform teaBag;
+	private Transform milk;
+	private Transform honey;
 	//private Transform cupLocation;
 
 	private float trigDis;
@@ -48,7 +54,7 @@ public class TeaStateM2 : MonoBehaviour {
 		teaInPot = false;
 		teaBrewing = false;
 		teaBrewed = false;
-		teaDone = true;
+		teaDone = false;
 
 		pot = GameObject.FindWithTag("Pot").GetComponent<Transform>();
 		potLocation = GameObject.FindWithTag ("PotHere").GetComponent<Transform> ();
@@ -57,6 +63,8 @@ public class TeaStateM2 : MonoBehaviour {
 		kettle = GameObject.FindWithTag("Kettle").GetComponent<Transform>();
 		kettleLocation = GameObject.FindWithTag ("KettleHere").GetComponent<Transform> ();
 		teaBag = GameObject.FindWithTag("TeaBag").GetComponent<Transform>();
+		milk = GameObject.FindWithTag ("Milk").GetComponent<Transform> ();
+		honey = GameObject.FindWithTag ("Honey").GetComponent<Transform> ();
 
 		steam = GameObject.FindGameObjectWithTag ("Steam");
 		steam.SetActive (false);
@@ -75,6 +83,9 @@ public class TeaStateM2 : MonoBehaviour {
 		acheive3.SetActive (false);
 
 		Done.SetActive (false);
+
+		//rend = Tea.GetComponent<MeshRenderer>();
+		//rend.material = new Material (rend.sharedMaterial);
 	}
 	
 	// Update is called once per frame
@@ -169,17 +180,50 @@ public class TeaStateM2 : MonoBehaviour {
 					teaDone = true;
 					Tea.SetActive (true);
 					acheive3.SetActive (true);
+
 				}
 
 			}
 		}
 
 		if (teaDone == true) {
-			//Done.SetActive (true);
+			Done.SetActive (true);
+			if ((Vector3.Distance (cup.position, honey.position) < trigDis2)) {
+				print ("Honey Near Tea");
+				if (Input.GetMouseButtonDown (0)) {
+					print ("Honey is in the tea");
+					//Tea.GetComponent<ChangeColor> ().ColorChange();
+					ChangeColor Col = Tea.GetComponent<ChangeColor>();
+					Col.ColorChange();
+					//StartCoroutine ("Changing");
+					//ColorChange();
+				}
+
+			}
 		}
 
 
 	}
+	/*
+	public void ColorChange (Color col)
+	{
+		StartCoroutine ("Changing");
+		print ("No really it's in there");
+	}
+
+	IEnumerator Changing (Color col)
+	{
+		float lp = 0f;
+		Color startCol = rend.material.color;
+
+		while ( lp < 1f )
+		{
+			lp += changeSpeed * Time.deltaTime * 0.1f;
+			rend.material.color = Color.Lerp (startCol, col, lp);
+
+			yield return null;
+		}
+	}*/
 
 	IEnumerator Boiling(){
 		yield return new WaitForSeconds(5);

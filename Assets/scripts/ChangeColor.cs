@@ -20,6 +20,7 @@ public class ChangeColor : MonoBehaviour
 	public void ColorChange (Color col)
 	{
 		StartCoroutine ("Changing");
+		print ("No really it's in there");
 	}
 
 	IEnumerator Changing (Color col)

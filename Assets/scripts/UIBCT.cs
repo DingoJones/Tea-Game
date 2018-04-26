@@ -15,6 +15,9 @@ public class UIBCT : MonoBehaviour {
 		One.SetActive (true);
 		Two.SetActive (true);
 		Three.SetActive (true);
+
+
+
 	}
 	
 	// Update is called once per frame
@@ -25,7 +28,8 @@ public class UIBCT : MonoBehaviour {
 		Three.SetActive (false);
 	}
 
-	public void OnTriggerClick(){
+	public void OnTrigger (){
 
 	}
+
 }
