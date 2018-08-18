@@ -23,7 +23,7 @@ public class OFollow : MonoBehaviour {
 	//private Transform rad;
 	private Transform player;
 
-	private NavMeshAgent wolf;
+	//private UnityEngine.AI.NavMeshAgent wolf;
 
 	private Transform beacon; 
 
@@ -60,7 +60,7 @@ public class OFollow : MonoBehaviour {
 		wolfCounter = 0;
 
 		beacon = GameObject.FindWithTag("Marker").GetComponent<Transform>();
-		wolf = GetComponent<NavMeshAgent>();
+		//wolf = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		wolfTr = GetComponent<Transform>();
 		//startPos = wolfTr.position;
 		player = GameObject.FindWithTag("Player").GetComponent<Transform>();

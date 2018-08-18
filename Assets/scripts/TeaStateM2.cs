@@ -8,6 +8,9 @@ public class TeaStateM2 : MonoBehaviour {
 	//public float changeSpeed = 9f;
 	//MeshRenderer rend;
 
+	public Color hny = new Color(1F, 0.75F, 0F, 1F);
+	public Color mlk = new Color(1F, 1F, 1F, 1F);
+
 	private Transform pot;
 	private Transform potLocation;
 	private Transform cup;
@@ -37,6 +40,7 @@ public class TeaStateM2 : MonoBehaviour {
 	public GameObject DD;
 	public GameObject Tea;
 	public GameObject Done;
+	public GameObject milkTea;
 
 	public GameObject acheive1;
 	public GameObject acheive2;
@@ -83,9 +87,12 @@ public class TeaStateM2 : MonoBehaviour {
 		acheive3.SetActive (false);
 
 		Done.SetActive (false);
-
+		milkTea.SetActive (false);
 		//rend = Tea.GetComponent<MeshRenderer>();
 		//rend.material = new Material (rend.sharedMaterial);
+
+		//mlk = new Color(1F, 1F, 1F, 1F);
+		//hny = new Color(1F, 0.75F, 0F, 1F);
 	}
 	
 	// Update is called once per frame
@@ -194,9 +201,21 @@ public class TeaStateM2 : MonoBehaviour {
 					print ("Honey is in the tea");
 					//Tea.GetComponent<ChangeColor> ().ColorChange();
 					ChangeColor Col = Tea.GetComponent<ChangeColor>();
-					Col.ColorChange();
+					Col.ColorChange(Color.yellow);
 					//StartCoroutine ("Changing");
-					//ColorChange();
+
+				}
+
+			}
+
+			if ((Vector3.Distance (cup.position, milk.position) < trigDis2)) {
+				print ("Milk Near Tea");
+				if (Input.GetMouseButtonDown (0)) {
+					print ("Milk is in the tea");
+					//ChangeColor Col = Tea.GetComponent<ChangeColor>();
+					//Col.ColorChange(Color.white);
+					milkTea.SetActive (true);
+
 				}
 
 			}
@@ -226,7 +245,7 @@ public class TeaStateM2 : MonoBehaviour {
 	}*/
 
 	IEnumerator Boiling(){
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(10);
 		print ("kettle is boiling");
 		KBoiled = true;
 		acheive1.SetActive (true);
@@ -240,7 +259,7 @@ public class TeaStateM2 : MonoBehaviour {
 	}
 
 	IEnumerator Brewing(){
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(10);
 		teaBrewed = true;
 		//print ("tea is brewed");
 		acheive2.SetActive (true);

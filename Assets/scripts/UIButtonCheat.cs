@@ -16,15 +16,16 @@ public class UIButtonCheat : MonoBehaviour {
 
 	public Button One;
 	public Button Two;
-
+	public GameObject OK;
 	// Use this for initialization
 	void Start () {
-		//CupOne.SetActive (false);
-		//PotOne.SetActive (false);
-		//KettleOne.SetActive (false);
-		//CupTwo.SetActive (false);
-		//PotTwo.SetActive (false);
-		//KettleTwo.SetActive (false);
+		CupOne.SetActive (false);
+		PotOne.SetActive (false);
+		KettleOne.SetActive (false);
+		CupTwo.SetActive (false);
+		PotTwo.SetActive (false);
+		KettleTwo.SetActive (false);
+		OK.SetActive (false);
 
 	}
 	
@@ -37,6 +38,7 @@ public class UIButtonCheat : MonoBehaviour {
 		PotTwo.SetActive (false);
 		KettleTwo.SetActive (false);
 		Steam.position = SteamPlace.position;
+		OK.SetActive (true);
 		/*
 			CupOne.SetActive (false);
 			PotOne.SetActive (false);

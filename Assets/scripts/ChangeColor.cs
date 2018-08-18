@@ -19,12 +19,13 @@ public class ChangeColor : MonoBehaviour
 	/// <param name="col">Col.</param>
 	public void ColorChange (Color col)
 	{
-		StartCoroutine ("Changing");
+		StartCoroutine ("Changing", col);
 		print ("No really it's in there");
 	}
 
 	IEnumerator Changing (Color col)
 	{
+		print ("Tea is changing colour");
 		float lp = 0f;
 		Color startCol = rend.material.color;
 

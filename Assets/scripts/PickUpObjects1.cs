@@ -17,13 +17,13 @@ public class PickUpObjects1 : MonoBehaviour
 		if (Input.GetMouseButtonDown (0) && draggingObject == null)
 		{
 			CheckForObject ();
-			Cursor.visible = false;
+			//Cursor.visible = false;
 		}
 		else if (Input.GetMouseButtonDown (0) && draggingObject != null)
 		{
 			draggingObject.GetComponent<Rigidbody>().useGravity = true;
 			draggingObject = null;
-			Cursor.visible = true;
+			//Cursor.visible = true;
 		}
 
 		if (draggingObject != null)
